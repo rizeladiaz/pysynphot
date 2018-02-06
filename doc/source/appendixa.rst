@@ -66,7 +66,7 @@ Castelli-Kurucz Atlas
 
 The ``$PYSYN_CDBS/grid/ck04models`` directory contains ATLAS9 stellar atmosphere
 models by Castelli & Kurucz 2004. There are about 4300 models for a wide range
-of metallicities, effective temperatures and gravities. The ones available
+of metal abundances, effective temperatures and gravities. The ones available
 in CRDS are from "the Grids of ATLAS9-ODFNEW Models and Fluxes" from
 `Dr. F. Castelli's webpage <http://wwwuser.oats.inaf.it/castelli/grids.html>`_
 (created on January 2007) and also available from
@@ -77,7 +77,7 @@ The atlas data files are organized in a similar naming convention as
 :ref:`pysynphot-appendixa-kurucz1993`, and are easily accessible using
 `~pysynphot.catalog.Icat` (also see :ref:`pysynphot-spec-atlas`).
 
-The example below generates a spectrum with metallicity :math:`\log Z = +0.1`,
+The example below generates a spectrum with metallicity :math:`[M/H] = +0.1`,
 temperature :math:`T_{\textnormal{eff}} = 10000 \textnormal{K}`, and gravity
 :math:`\log g = 3.0`:
 
@@ -91,7 +91,7 @@ Kurucz Atlas
 
 The ``$PYSYN_CDBS/grid/k93models`` directory contains the Kurucz 1993 Atlas
 of Model Atmospheres. The atlas contains about 7600 stellar
-atmosphere models for a wide range of metallicities, effective temperatures,
+atmosphere models for a wide range of metal abundances, effective temperatures,
 and gravities. These LTE models have improved opacities
 and are computed with a finer wavelength and temperature resolution
 than the :ref:`pysynphot-appendixa-bkmodels`.
@@ -100,7 +100,7 @@ This atlas is installed in CRDS from the Kurucz database at
 Goddard Space Flight Center. The original atlas (CD-ROM No. 13)
 was created on August 22, 1993 and can be obtained from Dr. R. Kurucz.
 Considering that the entire atlas occupies close to 70 MB of disk space,
-many applications could be satisfied by a copy of the solar metallicity
+many applications could be satisfied by a copy of the solar abundace ([M/H]=+0.0)
 spectra only (Table 2 of the README file).
 See
 `Kurucz 1993 atlas README file <ftp://ftp.stsci.edu/cdbs/grid/k93models/AA_README>`_
@@ -112,7 +112,7 @@ absolute flux is needed, the model spectrum must be
 
 The following example shows the header from one of the atlas data files.
 This file contains all the models for a star of metallicity
-:math:`\log Z = 0.0` (``p00``) and effective temperature
+:math:`[M/H] = 0.0` (``p00``) and effective temperature
 :math:`T_{\textnormal{eff}} = 8000 \textnormal{K}` (``8000``), which cover a
 range of gravities from :math:`\log g = +1.0` (``g10``) to
 :math:`\log g = +5.0` (``g50``).
@@ -157,7 +157,7 @@ HISTORY   and effective temperature but different gravity.
 
 The example below shows you how to manually select the flux for a specific
 model characterized by a given metallicity, effective temperature, and gravity.
-The filename ``kp01_10000`` means :math:`\log Z = +0.1` (``p01``) and
+The filename ``kp01_10000`` means :math:`[M/H] = +0.1` (``p01``) and
 :math:`T_{\textnormal{eff}} = 10000 \textnormal{K}` (``10000``). The column
 name ``g30`` means :math:`\log g = 3.0`:
 
